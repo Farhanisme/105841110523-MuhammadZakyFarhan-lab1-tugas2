@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fungsi JavaScript</title>
+      </head>
+      <body>
+        <h1>Hasil Fungsi JavaScript</h1>
+        <div id="hasilOperasiAritmatika"></div>
+        <div id="hasilOperasiLogika"></div>
+        <div id="hasilGabungString"></div>
+        <div id="hasilPerbandingan"></div>
+        <div id="hasilPerbandinganTipe"></div>
+
+        <script>
+          // Fungsi yang mengembalikkan nilai bertipe integer -> operator aritmatika
+          function operasiAritmatika(a, b) {
+            return a - b;
+          }
+
+          // Fungsi yang mengembalikkan nilai boolean -> operator logika
+          function operasiLogika(a, b) {
+            return a || b;
+          }
+
+          // Fungsi yang mengembalikkan nilai bertipe string -> operator aritmatika
+          function gabungString(a, b) {
+            return a + " " + b;
+          }
+
+          // Fungsi yang mengembalikkan nilai bertipe boolean -> operator komparasi
+          function perbandingan(a, b) {
+            return a == b;
+          }
+
+          // Fungsi yang mengembalikkan nilai bertipe boolean -> operator komparasi
+          function perbandinganTipe(a, b) {
+            return a === b;
+          }
+
+          // Menampilkan hasil fungsi ke dalam elemen HTML
+          document.getElementById("hasilOperasiAritmatika").innerText =
+            "Hasil Operasi Aritmatika (5 - 3): " + operasiAritmatika(5, 3);
+          document.getElementById("hasilOperasiLogika").innerText =
+            "Hasil Operasi Logika (true || false): " +
+            operasiLogika(true, false);
+          document.getElementById("hasilGabungString").innerText =
+            "Hasil Gabung String ('Hello', 'World'): " +
+            gabungString("Hello", "World");
+          document.getElementById("hasilPerbandingan").innerText =
+            "Hasil Perbandingan (5 == '5'): " + perbandingan(5, "5");
+          document.getElementById("hasilPerbandinganTipe").innerText =
+            "Hasil Perbandingan Tipe (5 === '5'): " + perbandinganTipe(5, "5");
+
+          let angka = [1, 2, 3, 4, 5];
+          angka.map(function (nilai) {
+            document.write(nilai + " ");
+          });
+
+          // contoh kasus untuk if else
+
+          let nilai = 80;
+          if (nilai >= 80) {
+            document.write("Nilai kamu A");
+          } else if (nilai >= 70) {
+            document.write("Nilai kamu B");
+          } else if (nilai >= 60) {
+            document.write("Nilai kamu C");
+          } else {
+            document.write("Nilai kamu 0");
+          }
+
+          // game check jodoh
+
+          let namaCeue = "berbi";
+          let namaCouo = "anto";
+          let hasil = Math.floor(Math.random() * 71) + 30;
+          if (hasil >= 80) {
+            document.write(
+              "Selamat " + namaCeue + " dan " + namaCouo + " adalah jodohh!"
+            );
+          } else if (hasil >= 70) {
+            document.write(
+              "Selamat " + namaCeue + " dan " + namaCouo + " bolehlah dicoba!"
+            );
+          } else if (hasil >= 60) {
+            document.write(
+              "Selamat " +
+                namaCeue +
+                " dan " +
+                namaCouo +
+                " bisa dipikir-pikir lagi ga?"
+            );
+          } else {
+            document.write(
+              "Selamat " +
+                namaCeue +
+                " dan " +
+                namaCouo +
+                " cari yang lain dehh!"
+            );
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
